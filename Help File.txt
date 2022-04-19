@@ -1,0 +1,131 @@
+***************************************************************************
+
+Author : Nart Schinackow
+
+Version : V.2.0.0
+
+Compiler Used : MikroC Pro For Pic
+
+Release Date : 29/12/2011
+
+Controller Used : Any
+
+Controller Oscillator : -
+
+***************************************************************************
+
+···········································································
+
+PROTOTYPE : SoftSerial.Init()
+
+DESCRIPTION : Initializes software uart pins defined by the user,
+baud rate is defined at "SoftWareUart.h"
+
+REQUIRES : extern sfr sbit SoftWare_Uart_Tx;
+extern sfr sbit SoftWare_Uart_Rx;
+extern sfr sbit SoftWare_Uart_Tx_Direction;
+extern sfr sbit SoftWare_Uart_Rx_Direction;
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.Print(--)
+
+DESCRIPTION : Prints an array of characters terminated by '\0'
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.PrintLine(--)
+
+DESCRIPTION : Prints an array of characters terminated by '\0'
+followed by a new line
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.PrintConst(--)
+
+DESCRIPTION : Prints a constant character array terminated by '\0'
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.PrintConstLine(--)
+
+DESCRIPTION : Prints a constant array of characters terminated by '\0'
+followed by a new line
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.ScanText(--,--)
+
+DESCRIPTION : Reads an array of characters, stopped by a defined
+character
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.PrintNChar(..,--)
+
+DESCRIPTION : Prints Number Of Charcters
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.GetChar()
+
+DESCRIPTION : Gets A Character
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
+···········································································
+
+PROTOTYPE : SoftSerial.PutChar(--)
+
+DESCRIPTION : Sends a single character to uart
+
+REQUIRES : SoftSerial.Init()
+
+NOTES : none
+
+···········································································
+
