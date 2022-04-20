@@ -181,7 +181,7 @@ void main() {
 
     if (uart_rd == 'W') {
 
-      UART1_Write_Text("ssssssss");
+      UART1_Write_Text("SSSSSSSS");
       UART1_Write('\n');
       UART1_Write('\r');
 
@@ -196,7 +196,7 @@ void main() {
 
     if (uart_rd == 'V') {
 
-      UART1_Write_Text("ssssssss");
+      UART1_Write_Text("SSSSSSSS");
       UART1_Write('\n');
       UART1_Write('\r');
 
@@ -209,9 +209,9 @@ void main() {
 
     //CAGE 2 Thermal Sensor
 
-    if (soft_uart_read == 'W') {
+    if (soft_uart_rd == 'W') {
 
-      UART1_Write_Text("ssssssss");
+      UART1_Write_Text("SSSSSSSS");
       UART1_Write('\n');
       UART1_Write('\r');
 

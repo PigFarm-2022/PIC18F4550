@@ -17,6 +17,10 @@ int percentage;
 char uart_rd;
 char soft_uart_rd;
 
+int x = 1;
+int y = 1;
+int prevX = 0;
+
 void timer1_delay(unsigned int time) {
 
   time /= 100; // divide the time x10.
@@ -79,6 +83,9 @@ void main() {
 
   TRISD.F3 = 0;
   LATD.F3 = 1;
+  
+  TRISD.F4 = 0;
+  LATD.F4 = 1;
 
   TRISA.B3 = 0; /* Set RB0 pin as a digital output pin */
   PORTA.B3 = 0; /* Initially sets the RB0 pin as activ low */
@@ -209,7 +216,7 @@ void main() {
 
     //CAGE 1 Thermal Sensor
 
-    if (soft_uart_read == 'w') {
+    if (soft_uart_rd == 'w') {
 
       UART1_Write_Text("ssssssss");
       UART1_Write('\n');

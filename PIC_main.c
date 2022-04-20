@@ -217,39 +217,45 @@ void main() {
     uart_rd = UART1_Read();
 
     if (uart_rd == 'y') {
-      SoftSerial.PrintLine("AT\r\n");
+    Delay_ms(200);
+      SoftSerial.Print("AT\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("ATE0\r\n");
+      SoftSerial.Print("ATE0\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("AT+CMGF=1\r\n");
+      SoftSerial.Print("AT+CMGF=1\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("AT+CMGS=\"+639201887451\"\r\n"); // Mobile Number
+      SoftSerial.Print("AT+CMGS=\"+639201887451\"\r\n"); // Mobile Number
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("Feed Tank 1 is 10% please refill!"); // Message
+      SoftSerial.Print("Feed Tank 1 is 10% please refill!"); // Message
       SoftSerial.PutChar(0x1A);
       SoftSerial.PutChar(0x0D);
+      
+      uart_rd = 'o';
     }
 
     if (uart_rd == 'z') {
-      SoftSerial.PrintLine("AT\r\n");
+    Delay_ms(200);
+      SoftSerial.Print("AT\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("ATE0\r\n");
+      SoftSerial.Print("ATE0\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("AT+CMGF=1\r\n");
+      SoftSerial.Print("AT+CMGF=1\r\n");
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("AT+CMGS=\"+639201887451\"\r\n"); // Mobile Number
+      SoftSerial.Print("AT+CMGS=\"+639201887451\"\r\n"); // Mobile Number
       SoftSerial.PutChar(0x0D);
       timer1_delay(200);
-      SoftSerial.PrintLine("Feed Tank 2 is 10% please refill!"); // Message
+      SoftSerial.Print("Feed Tank 2 is 10% please refill!"); // Message
       SoftSerial.PutChar(0x1A);
       SoftSerial.PutChar(0x0D);
+      
+      uart_rd = 'o';
 
     }
     //Set Time
@@ -395,7 +401,7 @@ void main() {
 
     UART1_Write('\n');
     UART1_Write('\r');
-    timer1_delay(500);
+    timer1_delay(1000);
 
     if (time[0] != '0') {
       UART1_Write('t');
@@ -405,7 +411,7 @@ void main() {
 
       UART1_Write('\n');
       UART1_Write('\r');
-      timer1_delay(500);
+      timer1_delay(1000);
     }
 
     if (time[0] == '0') {
@@ -416,7 +422,7 @@ void main() {
 
       UART1_Write('\n');
       UART1_Write('\r');
-      timer1_delay(500);
+      timer1_delay(1000);
     }
 
     //if (((time[9] == '0') && (time[10] == '0')) || ((time[9] == '3') && (time[10] == '0'))) {
@@ -426,7 +432,7 @@ void main() {
     }
     UART1_Write('\n');
     UART1_Write('\r');
-    timer1_delay(500);
+    timer1_delay(1000);
     //}
 
     if (uart_rd == 't') {
